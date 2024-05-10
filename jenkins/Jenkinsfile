@@ -5,6 +5,12 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+    tools {
+        maven 'Maven_3_9_0'
+    }
+    environment {
+        MAVEN_HOME = 'C:\Apachemaven\apache-maven-3.9.0-bin\apache-maven-3.9.0'
+    }
     stages {
         stage('Build') {
             steps {
